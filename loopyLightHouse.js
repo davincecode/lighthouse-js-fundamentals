@@ -1,14 +1,9 @@
-var x = 100;
+for (var num = 100; num < 201; num++) {
+  var checkForThree = num % 3;
+  var checkForFour = num % 4;
 
-while (x <= 199) {
-  if (x % 3 === 0 && x % 5 === 0) {
-    console.log("LoopyLighthouse");
-  } else if (x % 5 === 1) {
-    console.log("Lighthouse");
-  } else if (x % 3 === 1) {
-    console.log("Loopy");
-  } else {
-    console.log(x);
-  }
-  x = x + 1;
+  if (checkForThree === 0 && checkForFour === 0) console.log("LoopyLighthouse");
+  else if (checkForThree === 0) console.log("Loopy");
+  else if (checkForFour === 0) console.log("Lighthouse");
+  else console.log(num);
 }
